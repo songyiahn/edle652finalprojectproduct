@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2025-02-26T15:26:59-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Socioeconomic Status and Weight Perception: Influences on Weight Management Behaviors and Dietary Choices",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2025-02-26T15:27:00-08:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
