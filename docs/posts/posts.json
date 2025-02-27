@@ -15,5 +15,22 @@
     "preview": {},
     "last_modified": "2025-02-26T15:24:26-08:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2025-02-26-first-visualization/",
+    "title": "SES and Weight Perception",
+    "description": {},
+    "author": [
+      {
+        "name": "Songyi Ahn",
+        "url": {}
+      }
+    ],
+    "date": "2025-02-19",
+    "categories": [],
+    "contents": "\nThese are preliminary visualizations of my final project!\n\n\n\n\n\n\n\n\n\n\nNULL\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2025-02-26T16:46:10-08:00",
+    "input_file": "first-visualization.knit.md"
   }
 ]

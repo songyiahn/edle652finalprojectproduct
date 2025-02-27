@@ -1,0 +1,91 @@
+---
+title: "SES and Weight Perception"
+author: "Songyi Ahn"
+date: "2025-02-19"
+output: distill::distill_article
+---
+
+These are preliminary visualizations of my final project!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE)
+```
+
+
+```{r}
+library(rio)
+library(here)
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+demo <- import(here("data", "P_DEMO.xpt"))
+whistory <- import(here("data", "P_WHQ.xpt"))
+bmi <- import(here("data", "P_BMX.xpt"))
+inner_joined <- demo %>%
+  inner_join(whistory, by = "SEQN") %>%
+  inner_join(bmi, by = "SEQN")
+
+eduincwpercep <- inner_joined %>% select(DMDEDUC2, INDFMPIR, WHQ030, BMXBMI)
+```
+
+```{r}
+eduincwpercep1 <- eduincwpercep %>%
+  mutate(WHQ030 = case_when(
+    WHQ030 == 2 ~ 1,
+    WHQ030 == 3 ~ 2,
+    WHQ030 == 1 ~ 3,
+    TRUE ~ NA_real_
+  )) %>%
+  filter(!is.na(WHQ030))
+
+eduincwpercep1 <- eduincwpercep1 %>%
+  filter(DMDEDUC2 %in% c(1, 2, 3, 4, 5) & !is.na(DMDEDUC2))
+
+eduincwpercep1 <- eduincwpercep1 %>%
+  filter(!is.na(INDFMPIR))
+
+eduincwpercep1 <- eduincwpercep1 %>%
+  filter(!is.na(BMXBMI))
+
+eduincwpercep1 <- eduincwpercep1 %>%
+  rename(
+    `Education Level` = DMDEDUC2,
+    `Ratio of Family Income to Poverty` = INDFMPIR,
+    `Weight Perception` = WHQ030,
+    `Actual BMI` = BMXBMI
+  )
+```
+
+```{r}
+heatmap1 <- ggplot(eduincwpercep1, 
+                   aes(
+                     x = `Education Level`, 
+                     y = `Actual BMI`, 
+                     fill = factor(`Weight Perception`))) +
+  geom_tile() +
+  scale_fill_manual(values = c("lightblue", "blue", "navy")) 
+  labs(title = "Educational Level and Weight Perception",
+       x = "Education Level",
+       y = "Actual BMI",
+       fill = "Weight Perception") +
+  theme_minimal()
+
+heatmap2 <- ggplot(eduincwpercep1, 
+                   aes(
+                     x = `Ratio of Family Income to Poverty`, 
+                     y = `Actual BMI`, 
+                     fill = factor(`Weight Perception`))) +
+  geom_tile() +
+  scale_fill_manual(values = c("pink", "maroon", "darkred")) +
+  labs(title = "",
+       x = "Ratio of Family Income to Poverty and Weight Perception",
+       y = "Actual BMI",
+       fill = "Weight Perception") +
+  theme_minimal()
+
+print(heatmap1)
+print(heatmap2)
+```
+
