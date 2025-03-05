@@ -1,0 +1,23 @@
+---
+title: "Socioeconomic Status and Weight-related Cognition and Behaviors"
+author:
+  - name: Songyi Ahn 
+    url: "https://www.linkedin.com/in/sahn5/"
+    affiliation: School of Journalism and Communication, University of Oregon
+    affiliation_url: https://journalism.uoregon.edu/
+date: 02-26-2025
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+

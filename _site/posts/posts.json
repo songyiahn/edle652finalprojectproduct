@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Socioeconomic Status and Weight-related Cognition and Behaviors",
+    "description": {},
+    "author": [
+      {
+        "name": "Songyi Ahn",
+        "url": "https://www.linkedin.com/in/sahn5/"
+      }
+    ],
+    "date": "2025-02-26",
+    "categories": [],
+    "contents": "\n\n\n\n",
+    "preview": {},
+    "last_modified": "2025-03-05T09:28:49-08:00",
+    "input_file": {}
+  }
+]
