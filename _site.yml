@@ -10,6 +10,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Peer Review"
+      href: 1sesandweightperception.html
       
 author:
   name: "Songyi Ahn"
