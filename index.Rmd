@@ -1,5 +1,7 @@
 ---
-title: "Background"
+title: "Socioeconomic Status and Weight-related Cognition and Behaviors"
+description: |
+  Welcome to the EDLD652 Data Visualization Final Project Product website!
 site: distill::distill_website
 listing: posts
 ---

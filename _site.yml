@@ -6,7 +6,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
+    - text: "Background"
       href: about.html
     - text: "Peer Review"
       href: 1sesandweightperception.html
