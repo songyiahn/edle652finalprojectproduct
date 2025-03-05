@@ -1,10 +1,7 @@
 name: "FinalProjectProduct"
-title: "Socioeconomic Status and Weight Perception: Influences on Weight Management Behaviors and Dietary Choices"
-description:  |
-  Final Project of EDLD 652 Data Visualization
-output_dir: "docs"
 navbar:
-  title: "Socioeconomic Status and Weight Perception: Influences on Weight Management Behaviors and Dietary Choices"
+  title: "Socioeconomic Status and Weight-related Cognition and Behaviors"
+  type: inverse
   left:
     - text: "Home"
       href: index.html
@@ -12,9 +9,7 @@ navbar:
       href: about.html
     - text: "Peer Review"
       href: 1sesandweightperception.html
-      
 author:
   name: "Songyi Ahn"
   url: "https://www.linkedin.com/in/sahn5/" 
-
 output: distill::distill_article
